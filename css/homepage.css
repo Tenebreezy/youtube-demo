@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    width:80%;
+	margin: 0px auto;
+	margin-top: 5px;
+	font-family:Arial;
+
+	
+}
+nav {
+    width: 100%;
+	position: relative;
+	z-index:1000;
+	
+}
+nav ul {
+    padding: 0px;
+    margin: 0px;
+	box-shadow: 2px 2px 2px #dfdfdf;
+	float: center;
+	
+
+}
+nav ul:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+    nav ul,nav ul li{
+    background-color: #81A64B;
+}
+
+nav ul li a:hover{
+text-decoration: underline;
+background-color:#4C7E00;
+}
+
+    nav ul li {
+    list-style: none;
+    float:left;
+	border-right: 1px  ;
+	
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    padding: 14px 50px;
+	border-bottom: 1px  ;
+}
+nav ul li:hover > ul {
+    visibility: visible;
+	 
+}
+nav ul li ul li a{
+    background-color:#A9D16D;
+	 
+}
+
+nav ul li ul li a:hover{
+    background-color:#D4F5A3;
+	 text-decoration: none;
+	 color: #ffffff;
+}
+
+
+nav ul li ul{
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    padding:0px;
+	box-shadow:none;
+}
+nav ul li ul li{
+    float: none;
+}
+
+
+a.title {
+font-family: aldhabi;
+	font-size: 90px;
+	color: green;
+	margin: 0px;
+	padding: 0px;
+position:relative;
+top: -215px;
+left: 100px;
+text-decoration: none;
+font-weight: bold;
+
+}
+
+ a.title:hover{
+color: #ffffff;
+}
+
+
+
+p.title{
+font-size: 10pt;
+font-family: Arial;
+font-weight:bold;
+
+margin: 0px;
+	padding: 0px;
+	position:relative;
+top: -275px;
+left: 100px;
+}
+
+div.flag{
+
+position:relative;
+top:-240px;
+float:right;
+}
+
+#wowslider-container1 {
+padding: 20px 20px 20px 0px;
+float:left;
+position: relative;
+top:-180px;
+
+}
+
+div.side {
+width: 28%;
+height: 350px;
+padding:20px;
+border-color: green;
+float:right;
+line-height: 20px;
+background-color:#f0ffd9;
+position:relative;
+top:-180px;
+
+}
+
+
+
+div.footer p {
+padding: 0px 0px 0px 20px;
+}
+

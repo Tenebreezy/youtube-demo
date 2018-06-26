@@ -1,0 +1,540 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>HIS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="img/logo_icon.png">
+  
+<!-- 
+  slideshow -->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="stylesheet" type="text/css" href="css/slideshow/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+
+    <link rel="stylesheet" href="css/bootstrap.css">    
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="css/index.css">
+
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'pt-PT'}
+</script>
+
+
+<!-- twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<!-- maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- Slideshow -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+<link rel="stylesheet" type="text/css" href="css/slideshow/style.css" />
+<link rel="stylesheet" type="text/css" href="css/home.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+       
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+ var map;
+ var markers = [];
+ var lat,longi;
+
+
+
+
+  function initialize() {
+
+ 
+  var markerInit = new google.maps.LatLng(-25.959317, 32.604835);
+  var mapOptions = {
+    zoom: 15,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    zoomControl: false,
+    center: markerInit,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+
+  // Adds a marker at the center of the map.
+  addSimpleMarker(markerInit,'http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+
+  
+
+}
+
+
+function addSimpleMarker(location,icon){
+     var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  markers.push(marker);
+  marker.setIcon(icon);
+}
+
+   
+function GetLocation(location) {
+   lat=(location.coords.latitude);
+   longi=(location.coords.longitude);
+    
+} 
+     google.maps.event.addDomListener(window, 'load', initialize);
+      navigator.geolocation.getCurrentPosition(GetLocation);
+</script>
+</head>
+
+<body>
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+   
+    <header>
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="fa fa-bars fa-lg"></span>
+                        </button>
+                         <a class="navbar-brand" href="index.html">
+                         <img src="img/logo_main_banner.png" alt="" class="logo" width="50%"> 
+                         <!-- <h2 style="color:white">HIS</h2> -->
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right" style="padding-top:0px">
+                           <!--  <li><a href="#about" class="getApp">Home</a>-->
+                            <li><a href="#top">Home</a>
+                            </li>
+                            <li><a href="#about">Quem somos</a>
+                            <li><a href="#servicos">Serviços</a>
+                            </li>
+                            <li><a href="#reviews">Parceiros</a>
+                            </li>
+                            <li><a href="#support">Contacte-nos</a>
+                            </li>
+                             <li><a href="#footer">Ajuda</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-->
+        </nav>
+   
+        
+        <!--RevSlider-->
+        <div class="tp-banner-container">
+
+            <div class="tp-banner" >
+
+                <div class="divCentral">
+                     <iframe src="pages/home.html"  width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                </div>
+              
+            
+             <div id="divDireita">
+                 
+                <!--  facebook -->
+
+                 <div id="divFollowUs">
+                 <p class="seguir">Siga-nos</p>
+                 
+               
+                <!-- twitter -->
+              
+              <a href="https://twitter.com/HeitorIService" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
+          
+              <g:plusone size="medium" href="http://plus.google.com/u/0/113557671873833598372"></g:plusone> 
+
+             
+               <!-- <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/HIS-1503682719950404&layout=button_count& show_faces=true&width=380&action=like&colorscheme=light&height=30&locale=pt_BR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"> </iframe> -->
+              
+</div>
+   
+    <div id="divDireitaLikes">
+        
+<!-- <div class="fb-like" data-href="http://www.facebook.com/HIS-1503682719950404" data-share="false" data-show-faces="false" data-width="225px" style="margin-bottom:4%"></div>
+ -->
+<p class="like">Curta-nos</p> 
+ <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/HIS-1503682719950404&layout=button_count& show_faces=true&width=380&action=like&colorscheme=light&height=30&locale=pt_BR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"> </iframe> 
+    </div>
+            <div id="divDireitaComments">
+         
+            <iframe src="pages/comments.html"  width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            </div> 
+
+        
+                     
+                 
+            
+
+
+    </header>
+
+    <div class="wrapper">
+
+        
+
+        <section id="about">
+            <div class="container">
+                
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Quem somos</h1>
+                    <div class="divider"></div>
+                    <p>Heitor Info Service, Lda</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="about-item scrollpoint sp-effect2">
+                            <i class="fa fa-globe fa-2x"></i>
+                            <h3>Missão</h3>
+                            <p class="acerca">Empresa vocacionada para area de servicos de informática...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6" >
+                        <div class="about-item scrollpoint sp-effect5">
+                            <i class="fa fa-sitemap fa-2x"></i>
+                            <h3>Visão</h3>
+                            <p class="acerca">Determina  e da uma melhor imagem ao seu negocio e pretende fazer a diferenca no mundo tecnológico..</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6" >
+                        <div class="about-item scrollpoint sp-effect5">
+                            <i class="fa fa-users fa-2x"></i>
+                            <h3>Alvo</h3>
+                            <p class="acerca">O nosso púlico alvo são...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6" >
+                        <div class="about-item scrollpoint sp-effect1">
+                            <i class="fa fa-info fa-2x"></i>
+                            <h3>Género</h3>
+                            <p class="acerca">HIS é uma empresa...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Nossos Serviços</h1>
+                    <div class="divider"></div>
+                    <p>A HIS oferece uma gama de serviços na área de Engenharia Informática</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
+                        <div class="media media-left feature">
+                            <a class="pull-right" href="#" >
+                                <i class="fa fa-video-camera fa-2x" ></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Filmagens e edição de videos (Festas,casa,Casamento...)</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="media media-left feature">
+                            <a class="pull-right" href="#">
+                                <i class="fa fa-navicon fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Edição de imagens e Criação de logos</h3>
+                               
+                            </div>
+                        </div>
+                        <div class="media media-left feature">
+                            <a class="pull-right" href="#">
+                                <i class="fa fa-desktop fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Criação de aplicativos desktop</h3>
+                               
+                            </div>
+                        </div>
+                        <div class="media media-left feature">
+                            <a class="pull-right" href="#">
+                                <i class="fa fa-home fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Criação e Manutenção de Websites</h3>
+                               
+                            </div>
+                        </div>
+                        <div class="media media-left feature">
+                            <a class="pull-right" href="#">
+                                <i class="fa fa-file fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Desenvolvimento de aplicativos web</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4" >
+                        <img  class="img-responsive scrollpoint sp-effect5" alt="">
+                    </div>
+                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
+                        <div class="media feature">
+                            <a class="pull-left" href="#">
+                                <i class="fa fa-android fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Criação de aplicativos móveis</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="media feature">
+                            <a class="pull-left" href="#">
+                                <i class="fa fa-database fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Desenho de base de dados</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="media feature">
+                            <a class="pull-left" href="#">
+                                <i class="fa fa-cog fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Técnicos a disposição para exclarecimentos de dúvidas</h3>
+                               
+                            </div>
+                        </div>
+                       
+                        <div class="media active feature">
+                            <a class="pull-left" href="#">
+                                <i class="fa fa-plus fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">Acessoria Técnica em Informática e Internet</h3>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                    <h1 style="color:black">Parceiros</h1>
+                    <div class="divider"></div>
+                    <p style="color:black">Os nossos principais parceiros são</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-push-1 scrollpoint sp-effect3">
+                        <div class="review-filtering">
+                            <div class="review">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="review-person">
+                                            <img src="https://lh5.ggpht.com/9qXbq-_k2r7-nXQ0R8k9bocVfij0fxngCMrPAjbVWydvQa3np39aYUL2WG1iPEWtqb5j=w300" alt="" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="review-comment">
+                                            <h3 >Google</h3>
+                                            <p>
+                                               
+                                                <span>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star-o fa-lg"></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review rollitin">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="review-person">
+                                            <img src="https://www.microsoft.com/global/learning/en-us/PublishingImages/ms-logo-site-share.png" alt="" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="review-comment">
+                                            <h3>Microsoft</h3>
+                                            <p>
+                                                
+                                                <span>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star fa-lg"></i>
+                                                    <i class="fa fa-star-half-o fa-lg"></i>
+                                                    <i class="fa fa-star-o fa-lg"></i>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+       
+
+        
+
+        <section id="support" class="doublediagonal">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Contacte-nos</h1>
+                    <div class="divider"></div>
+                    <p>Para mais informação, contacte-nos</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
+                                <form role="form" action="pages/contactos.php" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nome indidual/ Empresa" name="nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea cols="30" rows="10" class="form-control" placeholder="Descrição" name="descricao"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                </form>
+                            </div>
+                            <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
+                               
+                                <div class="media">
+                                    <a class="pull-left" href="#" >
+                                        <i class="fa fa-envelope fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="mailto:heitorinfoservice@gmail.com">supporte@gmail.com</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#" >
+                                        <i class="fa fa-phone fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">+258 82...</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="footer">                    
+               
+                    <div id="divDireitaMapa">
+                     <div id="map-canvas">                      
+                     
+                    </div>
+                <p class="endereco">Avenida Marginal 3408, Cidade de Maputo</p>
+                 </div>
+             
+        
+            <div class="container">
+                <a href="#" class="scrollpoint sp-effect3">
+                    <img src="img/logo.png" alt="" class="logo">
+                </a>
+                <div class="social">
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="rights">
+                    <p>Copyright &copy; 2015</p>
+                    
+                   <a href="maito:heitorinfoservice@gmail.com" >Mapa do site</a>
+                      <a href="pages/contactos_list.php" >Login</a></p>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            appMaster.preLoader();
+        });
+    </script>
+</body>
+
+</html>
